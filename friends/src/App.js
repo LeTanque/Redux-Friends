@@ -1,9 +1,9 @@
 import React, { Component, Fragment } from 'react';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
-import {FaLock} from 'react-icons/fa';
+import { FaLock, FaHome } from 'react-icons/fa';
 
 import Login from './components/Login';
-import Protected from './components/Protected';
+import LoggedIn from './components/LoggedIn';
 import PrivateRoute from './components/PrivateRoute';
 
 
@@ -13,22 +13,25 @@ class App extends Component {
     return (
       <Fragment>
         <Router>
+          <section className='App'>
+            <nav className='navigation'>
+              <ul>
+                <li><Link to='/'><FaHome /> Home</Link></li>
+              </ul>  
+              <ul>
+                <li><Link to='/logged-in'>Login <FaLock /></Link></li>
+              </ul>
+            </nav>
 
 
-          <nav className='navigation'>
-            <ul>
-              <li><Link to='login'>Login <FaLock /></Link></li>
-            </ul>
-  
-  
-  
             <Route path='/login' component={Login} />
-            <PrivateRoute exact path='/protected' component={Protected} />
-          </nav>
+            <PrivateRoute exact path='/logged-in' component={LoggedIn} />
 
-          
-          
 
+
+
+
+          </section>
         </Router>
       </Fragment>
     );

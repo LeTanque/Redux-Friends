@@ -1,12 +1,8 @@
-const initialState = {
-   friends:[] 
-}
+import { combineReducers } from 'redux';
+import { charsReducer } from './friendsReducer'
 
-const reducer = (state=initialState, action) => {
-    switch (action.type) {
-        default:
-            return state;
-    }
-}
 
-export default reducer;
+export default combineReducers({
+    charsReducer
+});
+

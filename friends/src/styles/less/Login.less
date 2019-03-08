@@ -1,0 +1,28 @@
+.login-form {
+    width: 100%;
+    margin-top: 50px;
+    display: flex;
+    form {
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        input {
+            margin: 10px 0;
+            width: 100%;
+            font-size: 1.2rem;
+            max-width: 500px;
+            color: @dark;
+            padding: 5px;
+            &::placeholder {
+                color: @light;
+            }
+        }
+        button {
+            width: 50%;
+            margin: 10px auto;
+            // font-size: 0.8rem;
+            // padding: 5px 0;
+            text-transform: uppercase;
+        }
+    }
+}

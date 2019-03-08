@@ -69,7 +69,7 @@
 }
 
 // Horizontal RuLeZ
-.hr-style(@hr-margin:20px 0 30px 0; @hr-border-style:1px solid @light-gray) {
+.hr-style(@hr-margin:20px auto 30px auto; @hr-border-style:1px solid @light-gray) {
   margin: @hr-margin;
   border: @hr-border-style;
 }
@@ -128,6 +128,14 @@
   color: @white; 
   &:hover {
     background-color: @primary/2;
+    transition-duration: 0.5s;
+  }
+}
+.btn-dark {
+  background-color: @dark; 
+  color: @white; 
+  &:hover {
+    background-color: @dark*2;
     transition-duration: 0.5s;
   }
 }
