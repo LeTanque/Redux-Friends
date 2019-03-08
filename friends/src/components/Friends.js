@@ -1,12 +1,21 @@
 import React, { Fragment } from 'react';
+import Friend from './Friend';
 
-const Friends = (props) => {
 
+
+const Friends = props => {
+    console.log('These are the props on friends:', props.friends)
     return (
         <Fragment>
-            
+
             <ul>
-                {props.friends.map(friend => console.log(friend))}
+                {props.friends.map(friend => {
+                    return (
+                        <Fragment key={friend.id} >
+                            <Friend friend={friend} /> 
+                        </Fragment>
+                    )
+                } )}
             </ul>
 
         </Fragment>
